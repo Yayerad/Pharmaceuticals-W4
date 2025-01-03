@@ -21,3 +21,19 @@
 2025-01-03 16:13:26,764 - INFO - Filtering rows where stores are open...
 2025-01-03 16:13:27,957 - INFO - Starting Exploratory Data Analysis...
 2025-01-03 16:13:47,112 - INFO - Sales distribution plot saved.
+2025-01-03 16:14:24,218 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 16:14:24,914 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 16:14:25,467 - INFO - Sales during promotions plot saved.
+2025-01-03 16:14:43,704 - INFO - Sales during holidays plot saved.
+2025-01-03 16:14:56,738 - INFO - Correlation heatmap plot saved.
+2025-01-03 16:15:30,774 - INFO - Monthly sales trends plot saved.
+2025-01-03 16:16:10,686 - INFO - Effect of competition distance plot saved.
+2025-01-03 16:16:24,581 - INFO - Sales by assortment types plot saved.
+2025-01-03 16:16:42,338 - INFO - Summary of EDA:
+2025-01-03 16:16:42,339 - INFO - - Sales distribution is right-skewed with a long tail.
+2025-01-03 16:16:42,341 - INFO - - Promotions significantly boost sales on average.
+2025-01-03 16:16:42,342 - INFO - - Sales are higher during some state holidays like Christmas.
+2025-01-03 16:16:42,342 - INFO - - Correlation between Sales and Customers is strong, while other features have weaker correlations.
+2025-01-03 16:16:42,342 - INFO - - Competition distance impacts sales, but its effect diminishes in city centers.
+2025-01-03 16:16:42,342 - INFO - - Assortment type 'c' (extended) has the highest average sales.
+2025-01-03 16:16:42,342 - INFO - Exploratory Data Analysis completed successfully.
