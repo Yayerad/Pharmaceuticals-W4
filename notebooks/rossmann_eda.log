@@ -37,3 +37,15 @@
 2025-01-03 16:16:42,342 - INFO - - Competition distance impacts sales, but its effect diminishes in city centers.
 2025-01-03 16:16:42,342 - INFO - - Assortment type 'c' (extended) has the highest average sales.
 2025-01-03 16:16:42,342 - INFO - Exploratory Data Analysis completed successfully.
+2025-01-03 16:21:01,973 - INFO - Sales distribution plot saved.
+2025-01-03 16:21:09,249 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 16:21:09,988 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 16:21:10,517 - INFO - Sales during promotions plot saved.
+2025-01-03 16:21:43,304 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 16:21:44,011 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 16:21:44,614 - INFO - Sales during promotions plot saved.
+2025-01-03 16:22:42,561 - INFO - Sales during holidays plot saved.
+2025-01-03 16:22:46,158 - INFO - Correlation heatmap plot saved.
+2025-01-03 16:22:52,732 - INFO - Monthly sales trends plot saved.
+2025-01-03 16:23:05,058 - INFO - Effect of competition distance plot saved.
+2025-01-03 16:23:12,329 - INFO - Sales by assortment types plot saved.
