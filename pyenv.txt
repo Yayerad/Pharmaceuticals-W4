@@ -1,0 +1,2 @@
+$env:PATH="$HOME\.pyenv\pyenv-win\bin;$env:PATH"
+$env:PATH="$HOME\.pyenv\pyenv-win\shims;$env:PATH"
