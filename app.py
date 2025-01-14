@@ -7,6 +7,17 @@ import os
 # Initialize FastAPI
 app = FastAPI()
 
+
+# Add CORS middleware to allow cross-origin requests
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all origins or specify your frontend domain
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all HTTP methods
+    allow_headers=["*"],  # Allow all headers
+)
+
+
 # Define the input schema
 class PredictionInput(BaseModel):
     Store: int
