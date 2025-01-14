@@ -1,10 +1,8 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 import joblib
 import pandas as pd
 from pydantic import BaseModel
-
-# Load the serialized model
-model = joblib.load('src/model/sales_model_2025-01-08-14-21-03.pkl')
+import os
 
 # Initialize FastAPI
 app = FastAPI()
@@ -16,8 +14,8 @@ class PredictionInput(BaseModel):
     Promo: int
     StateHoliday: str
     SchoolHoliday: int
-    Assortment: int  
-    StoreType: int   
+    Assortment: int
+    StoreType: int
     CompetitionDistance: float
     Promo2SinceWeek: float
     Promo2SinceYear: float
@@ -29,13 +27,34 @@ class PredictionInput(BaseModel):
     IsMonthStart: int
     IsMonthEnd: int
 
+
+# Load the serialized model
+try:
+    model_path = "src/model/sales_model_2025-01-08-14-21-03.pkl"
+    if not os.path.exists(model_path):
+        raise FileNotFoundError(f"Model file not found at {model_path}")
+    model = joblib.load(model_path)
+except Exception as e:
+    raise RuntimeError(f"Failed to load the model: {str(e)}")
+
+
+# Define the root endpoint for sanity check
+@app.get("/")
+def root():
+    return {"message": "Welcome to the Sales Prediction API! Use the /predict endpoint to get predictions."}
+
+
 # Define the predict endpoint
 @app.post("/predict")
 async def predict_sales(data: PredictionInput):
     try:
+        # Convert input data to a pandas DataFrame
         input_data = data.dict()
-        prediction = model.predict(pd.DataFrame([input_data]))
+        input_df = pd.DataFrame([input_data])
+
+        # Make a prediction
+        prediction = model.predict(input_df)
+
         return {"predicted_sales": prediction[0]}
     except Exception as e:
-        return {"error": str(e)}
-
+        raise HTTPException(status_code=500, detail=str(e))
