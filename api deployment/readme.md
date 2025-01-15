@@ -1,4 +1,6 @@
-Deployment link:   https://pharmaceuticals-w4.onrender.com/predict
+![image](https://github.com/user-attachments/assets/515e68ca-54e1-4575-8cb7-7a4a11eb86d8)
+Website link: https://atsoe02z3cz1zhst.vercel.app/ 
+Api Deployment link:   https://pharmaceuticals-w4.onrender.com/predict
 
 Sales Prediction API
 This repository contains a Sales Prediction API built using FastAPI. The model predicts sales for a given store based on multiple input features such as store type, competition distance, promotional activities, and more. This API is deployed and can be accessed for making predictions.
